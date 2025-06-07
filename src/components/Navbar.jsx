@@ -63,28 +63,28 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="flex items-center gap-4 text-white text-xl">
           <a
-            href="https://linkedin.com"
+            href="www.linkedin.com/in/gopal-mankar"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="hover:text-blue-400 transition" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/MankarGopal"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub className="hover:text-gray-300 transition" />
           </a>
           <a
-            href="https://behance.net"
+            href="https://www.behance.net/gopalmankar1"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaBehance className="hover:text-blue-300 transition" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/gopalcreatz/"
             target="_blank"
             rel="noopener noreferrer"
           >

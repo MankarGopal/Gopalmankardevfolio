@@ -5,76 +5,74 @@ import project4 from "../assets/projects/project-4.jpg";
 
 export const HERO_CONTENT = `I’m a budding full-stack developer and UX/UI designer with a passion for building user-friendly, scalable web applications. Skilled in React, Next.js, Node.js, and MongoDB, I also explore machine learning to create smart solutions. I aim to craft digital experiences that are both functional and intuitive.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I'm a passionate full-stack developer and UX design enthusiast with hands-on experience in building responsive and user-focused web applications. Skilled in technologies like React, Node.js, MongoDB, and Tailwind CSS, I love blending functionality with great design. I’m currently diving deeper into Java, DSA, and UX principles to strengthen my core. I believe in continuous learning and enjoy contributing to creative, impactful digital experiences.`;
 
-export const EXPERIENCES = [
+export const EDUCATION = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "2022 - 2026",
+    degree: "B.Tech - Electronics Engineering",
+    institution: "MIT Academy of Engineering, Pune",
+    performance: "CGPA: 7.31 / 10",
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "2021",
+    degree: "12th - MSBSHSE",
+    institution: "Govt. Technical High School Cum School, Akola",
+    performance: "Percentage: 86.50%",
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "2019",
+    degree: "10th - MSBSHSE",
+    institution: "Shri M. B. Burungale Vidhyalaya, Shegaon",
+    performance: "Percentage: 71.20%",
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "College Community Website (UniVibe)",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    github: "https://github.com/yourusername/doc-generator",
+      "A full-stack MERN web app enabling student collaboration with features like resource sharing, social interaction, and responsive design.",
+    technologies: ["Figma", "React", "Tailwind CSS", "MongoDB", "Node.js"],
+    github: "https://github.com/MankarGopal",
   },
   {
-    title: "Task Management App",
+    title: "Authentication & Authorization Microservice",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    github: "https://github.com/yourusername/doc-generator",
+      "Secure microservice with OTP verification, JWT authorization, Google OAuth login, CI/CD via Jenkins, and Dockerized AWS deployment.",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "OAuth",
+      "Docker",
+      "AWS",
+    ],
+    github: "https://github.com/MankarGopal",
   },
   {
-    title: "Portfolio Website",
+    title: "Machine Learning for Self-Driving Cars",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    github: "https://github.com/yourusername/doc-generator",
+      "Implemented object detection, lane tracking, and sensor fusion using CARLA simulation, YOLO, and custom CNN models.",
+    technologies: ["Python", "TensorFlow", "CARLA", "Computer Vision", "YOLO"],
+    github: "https://github.com/MankarGopal",
   },
   {
-    title: "Blogging Platform",
+    title: "Ensemble Learning for Diabetes Prediction",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    github: "https://github.com/yourusername/doc-generator",
+      "Combined multiple ML models using soft voting to enhance accuracy; deployed on Render with Docker.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Docker"],
+    github: "https://github.com/MankarGopal",
   },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "G1407, Splendid Park, Dudulgaon, Pune, Maharashtra, India - 412105",
+  phoneNo: "+91-8766481387",
+  email: "gopal.mankar@mitaoe.ac.in",
 };
