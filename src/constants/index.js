@@ -32,30 +32,31 @@ export const PROJECTS = [
   {
     title: "College Community Website (UniVibe)",
     image: project1,
+    category: "design",
     description:
       "A full-stack MERN web app enabling student collaboration with features like resource sharing, social interaction, and responsive design.",
     technologies: ["Figma", "React", "Tailwind CSS", "MongoDB", "Node.js"],
     github: "https://github.com/MankarGopal",
   },
   {
-    title: "Authentication & Authorization Microservice",
-    image: project2,
+    title: "Practo App Redesign",
+    category: "design",
     description:
-      "Secure microservice with OTP verification, JWT authorization, Google OAuth login, CI/CD via Jenkins, and Dockerized AWS deployment.",
+      "UX/UI redesign focused on appointment booking and accessibility.",
     technologies: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "OAuth",
-      "Docker",
-      "AWS",
+      "UX Research",
+      "Wireframing",
+      "Figma",
+      "Heuristic Evaluation",
     ],
-    github: "https://github.com/MankarGopal",
+    images: ["/projects/practo/1.png", "/projects/practo/2.png"],
+    demo: "https://behance.net/...",
   },
+
   {
     title: "Machine Learning for Self-Driving Cars",
     image: project3,
+    category: "technical",
     description:
       "Implemented object detection, lane tracking, and sensor fusion using CARLA simulation, YOLO, and custom CNN models.",
     technologies: ["Python", "TensorFlow", "CARLA", "Computer Vision", "YOLO"],
@@ -64,10 +65,24 @@ export const PROJECTS = [
   {
     title: "Ensemble Learning for Diabetes Prediction",
     image: project4,
+    category: "technical",
     description:
       "Combined multiple ML models using soft voting to enhance accuracy; deployed on Render with Docker.",
     technologies: ["Python", "Scikit-learn", "Pandas", "Docker"],
     github: "https://github.com/MankarGopal",
+  },
+  {
+    title: "RiskApprove",
+    category: "technical",
+    description: "AI-powered risk-compliant investment advisor.",
+    technologies: ["React", "LLM", "RAG", "Node.js"],
+    github: "https://github.com/...",
+    demo: "https://...",
+    images: [
+      "/projects/riskapprove/1.png",
+      "/projects/riskapprove/2.png",
+      "/projects/riskapprove/3.png",
+    ],
   },
 ];
 
