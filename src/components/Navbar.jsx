@@ -86,7 +86,7 @@ const Navbar = () => {
 
           {/* Get in Touch - Desktop only */}
           <a
-            href="#contact"
+            href="contact.jsx"
             className="hidden sm:inline-block ml-4 px-4 py-1.5 rounded-full border border-white text-white text-sm hover:bg-white hover:text-black dark:hover:text-white dark:hover:bg-neutral-800 transition"
           >
             Get in Touch
