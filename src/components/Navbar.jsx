@@ -1,30 +1,36 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 import logo from "../assets/Gopaltext.png";
 import {
   FaLinkedin,
   FaGithub,
   FaBehance,
-  FaInstagram,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-const sections = ["about", "blogs", "projects", "certifications", "contact"];
+/* ONLY sections that exist on HOME page */
+const sectionLinks = ["about", "projects", "certifications", "contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
 
+  /* Scroll spy – ONLY on home page */
   useEffect(() => {
+    if (location.pathname !== "/") return;
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      for (let id of sections) {
+      for (let id of sectionLinks) {
         const el = document.getElementById(id);
         if (
           el &&
-          el.offsetTop - 100 <= scrollY &&
+          el.offsetTop - 120 <= scrollY &&
           el.offsetTop + el.offsetHeight > scrollY
         ) {
           setActiveSection(id);
@@ -36,7 +42,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const navLinkStyle = (id) =>
     `transition hover:text-pink-400 ${
@@ -44,23 +50,39 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="fixed top-4 left-1/2 z-50 w-full max-w-6xl transform -translate-x-1/2 px-4 sm:px-6">
-      <div className="flex flex-wrap items-center justify-between rounded-full bg-white/10 dark:bg-black/20 px-6 py-3 backdrop-blur-md shadow-md">
+    <nav className="fixed top-4 left-1/2 z-50 w-full max-w-6xl -translate-x-1/2 px-4 sm:px-6">
+      <div className="flex items-center justify-between rounded-full bg-white/10 dark:bg-black/20 px-6 py-3 backdrop-blur-md shadow-md">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img className="w-28" src={logo} alt="logo" />
-        </div>
+        </Link>
 
-        {/* Desktop Navigation */}
+        {/* DESKTOP NAV */}
         <div className="hidden md:flex gap-6 text-sm font-thin">
-          {sections.slice(0, 4).map((id) => (
-            <a key={id} href={`#${id}`} className={navLinkStyle(id)}>
+          {/* Section links */}
+          {sectionLinks.map((id) => (
+            <a key={id} href={`/#${id}`} className={navLinkStyle(id)}>
               {id}
             </a>
           ))}
+
+          {/* Page links */}
+          <Link
+            to="/blogs"
+            className="text-white hover:text-pink-400 transition"
+          >
+            blogs
+          </Link>
+
+          <Link
+            to="/journey"
+            className="text-white hover:text-pink-400 transition"
+          >
+            learning journey
+          </Link>
         </div>
 
-        {/* Right Side */}
+        {/* Right Side Icons */}
         <div className="flex items-center gap-4 text-white text-xl">
           <a
             href="https://in.linkedin.com/in/gopal-mankar-7a4283177"
@@ -84,15 +106,15 @@ const Navbar = () => {
             <FaBehance className="hover:text-blue-300 transition" />
           </a>
 
-          {/* Get in Touch - Desktop only */}
+          {/* Get in Touch */}
           <a
-            href="contact.jsx"
-            className="hidden sm:inline-block ml-4 px-4 py-1.5 rounded-full border border-white text-white text-sm hover:bg-white hover:text-black dark:hover:text-white dark:hover:bg-neutral-800 transition"
+            href="/#contact"
+            className="hidden sm:inline-block ml-4 px-4 py-1.5 rounded-full border border-white text-white text-sm hover:bg-white hover:text-black dark:hover:bg-neutral-800 transition"
           >
             Get in Touch
           </a>
 
-          {/* Hamburger - Mobile only */}
+          {/* Mobile Menu Button */}
           <button
             className="ml-4 md:hidden text-white text-xl"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -102,27 +124,34 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Animated Mobile Menu */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            key="dropdown"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden mt-2 w-full rounded-xl bg-white/10 dark:bg-black/30 backdrop-blur-md text-white px-6 py-4 flex flex-col gap-3 text-sm shadow-lg overflow-hidden"
+            className="md:hidden mt-2 w-full rounded-xl bg-white/10 dark:bg-black/30 backdrop-blur-md text-white px-6 py-4 flex flex-col gap-3 text-sm shadow-lg"
           >
-            {sections.map((id) => (
+            {sectionLinks.map((id) => (
               <a
                 key={id}
-                href={`#${id}`}
-                className={navLinkStyle(id)}
+                href={`/#${id}`}
                 onClick={() => setMenuOpen(false)}
+                className={navLinkStyle(id)}
               >
                 {id}
               </a>
             ))}
+
+            <Link to="/blogs" onClick={() => setMenuOpen(false)}>
+              blogs
+            </Link>
+
+            <Link to="/journey" onClick={() => setMenuOpen(false)}>
+              learning journey
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

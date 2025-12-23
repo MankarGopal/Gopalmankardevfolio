@@ -6,7 +6,7 @@ import { SiLeetcode, SiFigma } from "react-icons/si";
 const About = () => {
   return (
     <div className="border-b border-neutral-900 pb-12 px-4">
-      <h1 className="my-16 text-center text-4xl font-semibold">
+      <h1 id="about" className="my-16 text-center text-4xl font-semibold">
         About <span className="text-neutral-500">Me</span>
       </h1>
 
