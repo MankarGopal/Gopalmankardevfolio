@@ -74,7 +74,9 @@ const LearningJourney = () => {
   return (
     <section className="min-h-screen px-6 pt-32 pb-24">
       {/* Title */}
-      <h1 className="mb-10 text-center text-4xl font-bold">Learning Journey</h1>
+      <h1 className="mb-10 text-center text-4xl font-light tracking-tight">
+        Learning Journey
+      </h1>
 
       {/* Tabs */}
       <div className="mb-16 flex justify-center gap-10 border-b border-neutral-800">
@@ -183,7 +185,7 @@ const LearningJourney = () => {
           </motion.div>
         )}
 
-        {/* ---------------- LEARNING STATUS ---------------- */}
+        {/* ---------------- LEARNING STATUS (TIMELINE STYLE) ---------------- */}
         {activeTab === "learning" && (
           <motion.div
             key="learning"
@@ -191,22 +193,36 @@ const LearningJourney = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2"
+            className="relative mx-auto max-w-3xl"
           >
+            {/* Vertical Line */}
+            <div className="absolute left-3 top-0 h-full w-[2px] bg-neutral-800" />
+
             {learningStatusData.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="rounded-xl border border-neutral-800 bg-neutral-900 p-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="relative mb-14 pl-12"
               >
-                <div className="mb-3 flex items-center gap-3">
-                  {item.icon}
-                  <h3 className="text-lg font-semibold">{item.skill}</h3>
+                {/* Dot */}
+                <div className="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-purple-500 bg-neutral-900">
+                  <span className="h-2.5 w-2.5 rounded-full bg-purple-400"></span>
                 </div>
 
-                <p className="mb-2 text-sm text-purple-400">{item.status}</p>
+                {/* Meta */}
+                <p className="mb-1 text-sm text-purple-400">{item.status}</p>
 
-                <p className="text-neutral-400">{item.description}</p>
-              </div>
+                {/* Title */}
+                <h3 className="text-lg font-medium text-white">{item.skill}</h3>
+
+                {/* Description */}
+                <p className="mt-2 max-w-xl text-neutral-400 leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
             ))}
           </motion.div>
         )}

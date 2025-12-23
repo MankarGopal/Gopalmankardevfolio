@@ -12,7 +12,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 /* ONLY sections that exist on HOME page */
-const sectionLinks = ["about", "projects", "certifications", "contact"];
+const sectionLinks = ["about", "projects", "contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +85,7 @@ const Navbar = () => {
         {/* Right Side Icons */}
         <div className="flex items-center gap-4 text-white text-xl">
           <a
-            href="https://in.linkedin.com/in/gopal-mankar-7a4283177"
+            href="https://www.linkedin.com/in/gopal-mankar/"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -23,7 +23,9 @@ const itemVariants = {
 const Education = () => {
   return (
     <section className="border-b border-neutral-900 pb-24">
-      <h1 className="my-20 text-center text-4xl font-bold">Education</h1>
+      <h1 className="my-20 text-center text-4xl font-light tracking-tight">
+        Education
+      </h1>
 
       <motion.div
         className="relative mx-auto max-w-4xl"

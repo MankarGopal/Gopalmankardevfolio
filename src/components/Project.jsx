@@ -13,7 +13,9 @@ const Projects = () => {
   return (
     <section id="projects" className="border-b border-neutral-900 pb-24">
       {/* Section Title */}
-      <h1 className="my-20 text-center text-4xl font-bold">Projects</h1>
+      <h1 className="my-20 text-center text-4xl font-light tracking-tight">
+        Projects
+      </h1>
 
       {/* 🔹 BUTTONS JUST BELOW TITLE */}
       <div className="mb-16 flex justify-center gap-6">
