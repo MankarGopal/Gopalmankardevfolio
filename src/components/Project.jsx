@@ -1,14 +1,44 @@
 import { PROJECTS } from "../constants";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
+
+// Animation Variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-24">
       <h1 className="my-20 text-center text-4xl">Projects</h1>
-      <div className="flex flex-col items-center gap-12">
+      <motion.div
+        className="flex flex-col items-center gap-12"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {PROJECTS.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={cardVariants}
             className="w-full max-w-4xl rounded-xl border border-neutral-800 bg-neutral-900 p-6 shadow-md transition hover:shadow-purple-700/30"
           >
             <div className="flex items-center justify-between">
@@ -49,9 +79,9 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
