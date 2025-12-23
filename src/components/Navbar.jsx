@@ -77,7 +77,7 @@ const Navbar = () => {
             <FaGithub className="hover:text-gray-300 transition" />
           </a>
           <a
-            href="https://www.behance.net/gopalmankar1"
+            href="https://www.behance.net/gopalmankar4"
             target="_blank"
             rel="noopener noreferrer"
           >
