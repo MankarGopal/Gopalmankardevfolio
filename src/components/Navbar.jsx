@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="flex items-center gap-4 text-white text-xl">
           <a
-            href="www.linkedin.com/in/gopal-mankar"
+            href="https://in.linkedin.com/in/gopal-mankar-7a4283177"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -82,13 +82,6 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <FaBehance className="hover:text-blue-300 transition" />
-          </a>
-          <a
-            href="https://www.instagram.com/gopalcreatz/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className="hover:text-pink-400 transition" />
           </a>
 
           {/* Get in Touch - Desktop only */}
