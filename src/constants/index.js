@@ -50,7 +50,7 @@ export const PROJECTS = [
       "Heuristic Evaluation",
     ],
     images: ["/projects/practo/1.png", "/projects/practo/2.png"],
-    demo: "https://behance.net/...",
+    demo: "https://www.behance.net/gopalmankar4",
   },
 
   {
@@ -76,7 +76,7 @@ export const PROJECTS = [
     category: "technical",
     description: "AI-powered risk-compliant investment advisor.",
     technologies: ["React", "LLM", "RAG", "Node.js"],
-    github: "https://github.com/...",
+    github: "https://github.com/parag1803/RiskApprove",
     demo: "https://...",
     images: [
       "/projects/riskapprove/1.png",
