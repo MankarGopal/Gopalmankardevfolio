@@ -99,7 +99,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1a3LPy3ooOD2qlMaSWIgDZrbg918iNuER/view?usp=drive_link"
               className="rounded-full bg-white px-6 py-2 text-sm text-black hover:bg-neutral-200 transition"
             >
               Resume
